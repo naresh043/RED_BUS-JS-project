@@ -1,0 +1,979 @@
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 3.62vw;
+}
+#nav{
+   width: 100%;
+}
+
+nav {
+   width: 80%;
+   height: 1.8rem;
+   margin: 0 auto; 
+   display: flex;
+   justify-content: space-between;
+   align-items: center; 
+   position: sticky;
+   top: 0;
+   background-color: white;
+
+}
+#navChild1{
+   display: flex;
+   width: 40%;
+}
+.navSubChild{
+   width: 30%;
+   height: 2rem;
+}
+#navSubChild1{
+   width: 30%;
+   /* border-right: 1px solid rgb(186, 181, 181); */
+}
+#redBusLogo{
+   width: 50%;
+   height: 1rem;
+
+}
+.navTrainBusImg{
+   height: 0.50rem;
+   width: 32%;
+   margin-left: 35%;
+
+}
+.navSubChild2{
+   width: 40%;
+}
+
+.navTicket{
+   font-size: 0.25rem;
+   font-weight: 500;
+}
+.busTicketsChild{
+   border-radius: 10%;
+   width: 60%;
+   height: 70%;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   background-color: rgb(216, 78, 85);
+}
+#busTicket{
+   color: white;
+}
+.navSubChild{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 35%;
+}
+#trainTicketsNav{
+   background-color: white;
+}
+#navSubChild3{
+   display: flex;
+   justify-content:start
+}
+#navChild2{
+   width: 20%;
+   display: flex;
+   justify-content: space-around;
+}
+#help,#account,#navDropDown{
+   font-size: 0.25rem;
+   font-weight: 500;
+   cursor: pointer;
+}
+.helpDiv{
+   display: flex;
+}
+.navIncons{
+   width: 0.50rem;
+   cursor: pointer;
+}
+#navDropDown{
+   width: 1rem;
+}#header {
+   background-image: url(https://s3.rdbuz.com/images/webplatform/india/Homepage-header-2000.webp);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 9.4rem; 
+   box-sizing: border-box;
+}
+#headerHeading1{
+   color: white;
+   font-weight: 650;
+   font-size:0.60rem;
+   text-align: center;
+   padding-top: 1rem;
+}
+#userInput{
+   width: 74%;
+   height: 1.90rem;
+   margin-left: 13%;
+   margin-top: 1.5rem;
+   /* border: 1px solid; */
+   border-radius: 0.50rem;
+   background-color: white;
+   display: flex;
+}
+.userInputsDiv{
+   width: 27%;
+   height: 1.90rem;
+   /* border: 1px solid; */
+   border-right: 1px solid #e0e0e0;
+   padding-left: 0.20rem;
+}
+#userInput svg{
+   width: 0.60rem;
+   height: 0.60rem;
+}
+#userInput input{
+   font-size: 0.30rem;
+   /* margin-top: 0.rem; */
+   outline: none;
+   border: none;
+
+}
+#userInput span{
+font-size: 0.50rem;
+/* margin-left: 0.25rem; */
+}
+#searchButton{
+   width: 20%;
+   font-size: 0.35rem;
+   font-weight: 600;
+   color: white;
+   border: none;
+   border-bottom-right-radius: 0.50rem;
+   border-top-right-radius: 0.50rem ;
+   background-color: #d84e55;
+
+}
+
+.trendingOffers{
+   width: 80%;
+   margin-left: 10%;
+   height: 5.2rem;
+   background-color: white;
+   border-radius: 0.5rem;
+   box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 25px;
+   margin-top: -1rem;
+}
+.trending{
+   font-size: 0.55rem;
+   font-weight: 600;
+   display: inline-block;
+   margin-left: 1rem;
+}
+
+#carousel{
+   width: 94%;
+   margin-left: 3%;
+   height: 3.2rem;
+   display: flex;
+   justify-content: space-between;
+   /* justify-content: space-around; */
+}
+
+.cards{
+   width: 23%;
+   height: 3.2rem;
+   border: 1px solid;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: rgb(255, 255, 255);
+   border-radius: 0.50rem;
+}
+.cards p{
+   margin: 0;
+}
+.cardsChild1>img{
+   width: 1.4rem;
+   height: 1.4rem;
+   border-radius: 50%;
+}
+.cardsChild2{
+   display: flex;
+   flex-direction: column;
+}
+.busType{
+   font-size: 0.28rem;
+   border: 1px solid;
+   padding: 2%;
+   width: 20%;
+   border-radius: 0.20rem;
+}
+
+.validType{
+   font-size: 0.22rem;
+   font-weight: 500;
+
+}
+.offerType{
+   font-size: 0.30rem;
+}
+.cardsChild2>b{
+   font-size: 0.35rem;
+}
+
+
+#govtBus{
+   width: 94%;
+   margin-left: 3%;
+   height: 3.2rem;
+   display: flex;
+   justify-content: space-between;
+}
+
+#govtDiv{
+   width: 30%;
+   height: 3.2rem;
+   border-radius: 0.50rem;
+   box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 25px;
+
+}
+#govtDiv p{
+   margin: 0;
+}
+#forImg{
+   display: flex;
+   justify-content: center;
+   border-bottom:  1px solid #e0e0e0;;
+}
+
+#forImg>img{
+   width: 1.4rem;
+   height: 1.4rem;
+   border-radius: 50%;
+}
+#title{
+   height: 1.4rem;
+   margin-top: -0.80rem;
+}
+#title p{
+   font-size: 0.28rem;
+}
+#title b{
+   font-size: 0.30rem;
+}
+#title small{
+   background-color: green;
+   color: white;
+   padding-left: 1%;
+   padding-right: 1%;
+}
+#service{
+
+   text-align: center;
+   width: 80%;
+   margin-left: 10%;
+}
+#service>p{
+   font-size: 0.30rem;
+}
+#partner{
+   font-weight: 500;
+}
+
+
+
+.viewAll{
+   margin-left: 12.6rem;
+   font-size: 0.35rem;
+   font-weight: 600;
+   padding: 0.1rem;
+   border-radius: 0.5rem;
+   color: blue;
+   width: 10%;
+   border: 0.5px solid rgb(84, 83, 83);
+}
+#viewAllBtn2{
+   margin-left:11.8rem;
+}
+#governmentBuses{
+   margin-top: 1rem;
+}
+
+
+#trainNow{
+   width: 80%;
+   height: 10rem;
+   margin-left: 10%;
+   margin-top: 1.8rem;
+   display: flex;
+   justify-content: space-between;
+}
+.trainMatter{
+   width: 47%;
+   height: 10rem;
+}
+
+#trainImg{
+   width: 100%;
+   height: 100%;
+}
+.now{
+   font-size: 0.7rem;
+}
+#bold{
+   font-weight: 500;
+}
+#trainContentNow{
+   font-size: 0.6rem !important;
+   letter-spacing:0.030rem;
+}
+#trainLogo{
+   display: flex;
+   width: 32%;
+   border-bottom: 2px solid  rgb(216, 78, 85);
+   padding: 0.15rem;
+   margin-left: 0.2rem;
+   margin-top: -0.4rem;
+
+}#trainImgLogo{
+   width: 1rem;
+}
+#trainTickets{
+   font-size: 0.30rem;
+   font-weight: 650;
+   color: rgb(216, 78, 85);
+}
+#paragraph{
+   margin-top: 0.4rem;
+   font-size: 0.3rem;
+   letter-spacing:0.020rem;
+   margin-bottom: 0.50rem;
+}
+#description{
+   font-size: 0.28rem;
+   margin-top: 1rem;
+   margin-left: 0.30rem;
+   font-weight: 700;
+   word-spacing: 0.020rem;
+   letter-spacing: 0.008rem;
+
+}
+#details{
+   margin-bottom: 1rem;
+}
+.descriptionDiv{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 1rem;
+    margin-top: -0.20rem;
+}
+#bookTrainTickets{
+   font-size: 0.30rem;
+   padding: 0.20rem;
+   font-weight: 700;
+   border-radius: 0.2rem;
+   color: white;
+   background-color: rgb(216, 78, 85);
+   border: none;
+}
+
+#enjoyApp {
+   background-image: url(https://s1.rdbuz.com/web/images/homeV2/appinstall/appInstallbg.svg);
+   background-size: contain;
+   background-position: center; 
+   background-repeat: no-repeat;
+   width: 80%;
+   margin-left: 10%;
+   height: 8rem;
+   margin-top: 1rem;
+   display: fl;
+}
+#enjoyTheApp{
+   font-size: 0.55rem;
+   font-weight: 600;
+   padding: 0.60rem;
+   color: white;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#rating{
+   width: 30%;
+   height: 5rem;
+   background-color: white;
+   margin: 1rem;
+   margin-top: -.8rem;
+   border-radius: 0.5rem;
+}
+#tickMainDiv{
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 0.50rem;
+}
+#ticksDiv,#ticksDiv2{
+   display: flex;
+   flex-direction: row;
+   margin-left: 0.60rem;
+   /* margin-bottom: 0.20rem; */
+   margin-top: 0.40rem;
+ }
+
+ .check{
+   width: 0.40rem;
+   height: 0.50rem;
+ }
+.checkText{
+   font-size: 0.35rem;
+   margin: 0;
+   font-weight: 500;
+   margin-left: 0.20rem;
+}
+#downloadsDiv{
+   width: 80%;
+   height: 2rem;
+   margin-left: 0.70rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.downloadsChild{
+   width: 45%;
+   height: 1.5rem;
+   display: flex;
+   flex-direction: column;
+}
+.ratingStar{
+   font-size: 0.40rem;
+   margin: 0;
+   font-weight: 500;
+}
+.million{
+   font-size: 0.25rem;
+   margin: 0;
+
+}
+.store{
+   font-size: 0.35rem;
+   font-weight: 500;
+   margin: 0;
+}
+#downloadsChild1{
+   border-right: 2px solid rgb(106, 106, 106);
+}
+#qrDownloadDiv{
+   width: 30%;
+   height: 3rem;
+   display: flex;
+   justify-content: space-between;
+}
+#enjoyDivChild{
+   display: flex;
+   
+}
+.qrDiv{
+   width: 45%;
+   height: 3rem;
+}
+.scan{
+   margin: 0;
+   font-size: 0.35rem;
+   font-weight: 700;
+   color: white;
+}
+.appImg{
+   margin: 0;
+   padding: 0;
+   margin-top: -0.80rem;
+   width: 2.4rem;
+   height: 1rem;
+}
+#appImg2{
+   margin-bottom: 1rem;
+}
+#qrCode{
+   width: 1.8rem;
+   height: 1.8rem;
+}
+
+#primoAdd{
+   width: 80%;
+   height:10rem;
+   margin-left: 10%;
+   border-radius: 1rem;
+   margin-top: 1.5rem;
+   display: flex;
+   background-color: rgb(251, 202, 65);
+}
+#primoAddChild1{
+   width: 67%;
+   height: 10rem;
+   border-radius: 1rem;
+
+}
+#primoAddChild2{
+   width: 33%;
+   height: 10rem;
+   border-radius: 1rem;
+   background-color: rgb(35, 48, 88);
+   display: flex;
+   flex-direction: column;
+   /* justify-content: space-around; */
+}
+#primoImg{
+   width: 100%;
+   height: 10rem;
+   border-radius: 1rem;
+}
+#primoAddChildMainDiv{
+   width: 80%;
+   height: 70%;
+   margin: 15% 10% 15% 10%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.primoAdd2SubChild{
+   width: 100%;
+   height: 20%;
+   margin-top: 14%;
+   display: flex;
+   /* justify-content: space-between; */
+   align-items: center;
+}
+.onTimeDiv1{
+   margin: 0;
+   font-size: 0.4rem;
+   color: white;
+   margin-left: 0.30rem;
+}
+.clock{
+   width: 1rem;
+   height: 1rem;
+   color: white;
+}
+#global{
+   margin: 5% 10% 3% 10%;
+   font-size: 0.50rem;
+   font-weight: 600;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#countries{
+   width: 80%;
+   height: 3rem;
+   margin-left: 10%;
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+}
+.countryImg{
+   width: 80%;
+   height: 80%;
+}
+.countryName{
+   margin: 0;
+   font-size: 0.30rem;
+   font-weight: 500;
+}
+.countryNavigation{
+   color: black;
+   text-decoration: none;
+}
+.countryImg:hover ~ .countryName {
+   background-color: #eee;
+   border-radius: 5rem;
+   margin-left: 15%;
+   margin-right: 15%;
+   padding: 1%;
+
+}
+#busBooking{
+   margin: 0;
+   margin-left: 10%;
+   margin-top: 4%;
+   font-size: 0.70rem;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#busBookingdownContent{
+   margin: 0;
+   margin: 1% 10% 0% 10%;
+   font-size: 0.33rem;
+}
+#discountDiv{
+   width: 80%;
+   margin: 2% 10% 2% 10%;
+   height: 2.8rem;
+   border: 1px solid #e0e0e0;
+   border-radius: 0.30rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+#logoBus{
+   width: 15%;
+   height: 2rem;
+}
+#unlockDiv{
+   width: 70%;
+   height: 2rem;
+}
+#bookDiv{
+   width: 15%;
+   height:2rem;
+}
+
+#toTop{
+   /* width: 80%; */
+   font-size: 0.28rem;
+   font-weight: 500;
+   color: white;
+   background-color: rgb(216, 78, 85);
+   border: none;
+   padding: 7% 15% 7% 15%;
+   border-radius: 0.10rem;
+}
+#discountDivImg{
+   width: 1rem;
+   height: 1rem;
+   margin-left: 50%;
+}
+#unclokContent{
+   margin: 0;
+   font-size: 0.45rem;
+   font-weight: 500;
+   margin-top: 0.35rem;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   letter-spacing: 0.02rem;
+}
+#dealsRoutes{
+   display: flex;
+}
+.deals{
+   margin: 0;
+   font-size: 0.30rem;
+   border-right: 1px solid;
+   font-weight: 600;
+}
+.colorRed{
+   color: rgb(216, 78, 85);
+}
+#deals3{
+   border: none;
+}
+footer{
+   width: 100%;
+   height: 10rem;
+   background-color: #F7F7F7;
+}
+#footerMainDiv{
+   width: 80%;
+   height: 8.5rem;
+   margin-left: 10%;
+   margin-top: 5%;
+   border-bottom: 1px solid #e0e0e0;
+   border-top: 1px solid #e0e0e0;
+   display: flex;
+   justify-content: space-between;
+   padding-top: 5%;
+   background-color: #F7F7F7;
+}
+.footerDiv{
+   width: 15%;
+   height: 7rem;
+   text-align: center;
+   text-align: start;
+}
+#footerImg{
+   width: 2rem;
+   /* height: 2rem; */
+}
+#footerDiv1{
+   width: 22%;
+}
+.footerDivContent{
+   font-size: 0.30rem;
+   margin: 0;
+   line-height: 0.55rem;
+}
+#socialMedia{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 80%;
+   margin-left: 10%;
+}
+#rights{
+   margin: 0;
+   font-size: 0.30rem;
+}
+.icons{
+   width: 0.40rem;
+   height: 0.40rem;
+   margin-right: 0.10rem;
+}
+
+/* //-------------------------------------------------------------------------------------------------------------------------------- */
+
+#singUp{
+   width: 50vw;
+   height: 8.7rem;
+   overflow: hidden;
+   border: none;
+   margin: auto;
+}
+#singIn{
+   width: 50vw;
+   height: 8.7rem;
+   overflow: hidden;
+   border: none;
+   margin: auto;
+}
+.mainDiv{
+   width: 100%;
+   height: 8.7rem;
+   border: 1px solid #e0e0e0;
+   display: flex;
+   
+
+}
+.innerDiv1{
+   width: 50%;
+   height: 8.7rem;
+   background-image: url(https://s3.rdbuz.com/Images/webplatform/contextualLogin/desktop-payment-offers.svg);
+   background-repeat: no-repeat;
+}
+.loginPageImgContent{
+   font-size: 0.6rem;
+   color: white;
+   font-weight: 500;
+   margin: 5%;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.innerDiv2{
+   width: 50%;
+   height: 8.7rem;
+   /* border: 1px solid; */
+}
+.subDiv{
+   width: 90%;
+   margin: 5%;
+   height: 1rem;
+   display: flex;
+   justify-content: space-between;
+   /* border: 1px solid; */
+}
+.loginBusLogo{
+   height: 1rem;
+   width: 1.5rem;
+   display: inline-block;
+}
+   .singInContent{
+   font-size: 0.50rem;
+   font-weight: 550;
+   color: #d84e55;
+   margin: 0;
+}
+.userInputs>input{
+  height: 0.50rem;
+}
+.star{
+   color: red;
+   }
+
+   .userInputs{
+   font-size: 0.30rem;
+   margin-top: 0.50rem;
+   padding: 2%;
+   display: grid;
+   grid-template-columns: 5rem;
+   row-gap: .10rem;
+   border: none;
+   font-size: 0.30rem;
+   cursor: pointer;
+   margin-top: 10px;
+   }
+
+   .singIn{
+   margin-top: 5%;
+   background-color: #d84e55;
+   padding: 5%;
+   text-align: center;
+   color: white;
+   cursor: pointer;
+   font-size: 0.35rem;
+   font-weight: 500;
+   }
+
+   .login{
+   font-size: 0.20rem;
+   padding: 2%;
+   color: white;
+   background-color: #d84e55;
+   border: none;
+   }
+   #closeDialogBox{
+   height: 0.50rem;
+   width: 0.50rem;
+   } 
+   #forms{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   #loginSubmit{
+      font-size: 0.30rem;
+  }
+  .descriptionDiv img{
+   width: 0.50rem;
+  }
+
+/* 
+  @media screen and (min-width: 500px) and (max-width: 600px){
+  .descriptionDiv img{
+   width: 0.10rem;
+  }
+  } */
+
+
+
+
+
+/* 
+ #signUp{
+   width:60%;
+   height: 9rem;
+   border: none;
+   position: absolute;
+   top: 50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+
+}
+.img{
+   height: 9rem;
+}
+.mainDiv{
+   width: 100%;
+   height: 9rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   
+}
+ .innerDiv1{
+   width: 48%;
+   height: 8.7rem;
+   background-image: url(https://s3.rdbuz.com/Images/webplatform/contextualLogin/desktop-payment-offers.svg);
+   background-repeat: no-repeat;
+
+} 
+.innerDiv2{
+   width: 48%;
+   height: 8.5rem;
+
+}
+.loginPageImgContent{
+   font-size: 0.6rem;
+   color: white;
+   font-weight: 500;
+   margin: 5%;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.loginBusLogo{
+   height: 1rem;
+   width: 1.5rem;
+   display: inline-block;
+}
+.singInContent{
+   font-size: 0.50rem;
+   font-weight: 550;
+   color: #d84e55;
+   margin: 0;
+
+} 
+ .userInputs{
+   font-size: 0.30rem;
+   margin-top: 0.50rem;
+   padding: 2%;
+   display: grid;
+   grid-template-columns: 5rem;
+   row-gap: .10rem;
+   border: none;
+   font-size: 0.30rem;
+   cursor: pointer;
+   margin-top: 10px;
+}
+.userInputs>input{
+   height: 0.50rem;
+}
+.star{
+   color: red;
+}
+.singIn{
+   margin-top: 5%;
+   background-color: #d84e55;
+   padding: 5%;
+   text-align: center;
+   color: white;
+   cursor: pointer;
+   font-size: 0.35rem;
+   font-weight: 500;
+}
+.login{
+   font-size: 0.20rem;
+   padding: 2%;
+   color: white;
+   background-color: #d84e55;
+   border: none;
+} */
+/* #closeDialogBox{
+   height: 0.50rem;
+   width: 0.50rem;
+   margin-left: 5rem;
+} */
+
+/* #singUp{
+   width: 100vw;
+   height: 10rem;
+   position: relative;
+}
+#mainDigDialog{
+   width: 10%;
+   height: 9rem;
+   position: absolute;
+   top: 50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   margin-left: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.innerDiv1{
+   width: 48%;
+   height: 8.7rem;
+   background-image: url(https://s3.rdbuz.com/Images/webplatform/contextualLogin/desktop-payment-offers.svg);
+   background-repeat: no-repeat;
+}
+.loginPageImgContent{
+   font-size: 0.6rem;
+   color: white;
+   font-weight: 500;
+   margin: 5%;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#innerDiv2{
+   width: 48%;
+   height: 8.7rem;
+   border: 1px solid;
+
+}
+
+
+  */

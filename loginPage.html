@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./index1.css"> -->
+     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+          }
+
+            html {
+            font-size: 3.62vw;
+            }
+
+        #singUp{
+            width: 50vw;
+            height: 8.7rem;
+            overflow: hidden;
+            border: none;
+            margin: auto;
+        }
+        #singIn{
+            width: 50vw;
+            height: 8.7rem;
+            overflow: hidden;
+            border: none;
+            margin: auto;
+        }
+
+        .mainDiv{
+            width: 100%;
+            height: 8.7rem;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            
+
+        }
+        .innerDiv1{
+            width: 50%;
+            height: 8.7rem;
+            background-image: url(https://s3.rdbuz.com/Images/webplatform/contextualLogin/desktop-payment-offers.svg);
+            background-repeat: no-repeat;
+        }
+        .loginPageImgContent{
+            font-size: 0.6rem;
+            color: white;
+            font-weight: 500;
+            margin: 5%;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        .innerDiv2{
+            width: 50%;
+            height: 8.7rem;
+            /* border: 1px solid; */
+        }
+        .subDiv{
+            width: 90%;
+            margin: 5%;
+            height: 1rem;
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid; */
+        }
+        .loginBusLogo{
+            height: 1rem;
+            width: 1.5rem;
+            display: inline-block;
+        }
+            .singInContent{
+            font-size: 0.50rem;
+            font-weight: 550;
+            color: #d84e55;
+            margin: 0;
+        }
+        .userInputs>input{
+           height: 0.50rem;
+         }
+        .star{
+            color: red;
+            }
+
+            .userInputs{
+            font-size: 0.30rem;
+            margin-top: 0.50rem;
+            padding: 2%;
+            display: grid;
+            grid-template-columns: 5rem;
+            row-gap: .10rem;
+            border: none;
+            font-size: 0.30rem;
+            cursor: pointer;
+            margin-top: 10px;
+            }
+
+            .singIn{
+            margin-top: 5%;
+            background-color: #d84e55;
+            padding: 5%;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            font-size: 0.35rem;
+            font-weight: 500;
+            }
+
+            .login{
+            font-size: 0.20rem;
+            padding: 2%;
+            color: white;
+            background-color: #d84e55;
+            border: none;
+            }
+            #closeDialogBox{
+            height: 0.50rem;
+            width: 0.50rem;
+            } 
+            #forms{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #loginSubmit{
+                font-size: 0.30rem;
+            }
+
+     </style>
+</head>
+<body>
+
+    <button onclick="opendialog()">Open</button>
+
+    <dialog id="singUp">
+        <div class="mainDiv">
+            <div class="innerDiv1">
+                <p class="loginPageImgContent">Unlock the <br>Smart Way to Travel</p>
+            </div>
+            <div class="innerDiv2">
+                <div class="subDiv">
+                    <img class="loginBusLogo" src="https://s3.rdbuz.com/Images/rdc/rdc-redbus-logo.svg" alt="">
+                    <span onclick="closeDialog()"><svg id="closeDialogBox"  viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M332 663.2c-9.6 9.6-9.6 25.6 0 35.2s25.6 9.6 35.2 0l349.6-356c9.6-9.6 9.6-25.6 0-35.2s-25.6-9.6-35.2 0L332 663.2z" fill=""></path><path d="M681.6 698.4c9.6 9.6 25.6 9.6 35.2 0s9.6-25.6 0-35.2L367.2 307.2c-9.6-9.6-25.6-9.6-35.2 0s-9.6 25.6 0 35.2l349.6 356z" fill=""></path><path d="M516.8 1014.4c-277.6 0-503.2-225.6-503.2-503.2S239.2 7.2 516.8 7.2s503.2 225.6 503.2 503.2-225.6 504-503.2 504z m0-959.2c-251.2 0-455.2 204.8-455.2 456s204 455.2 455.2 455.2 455.2-204 455.2-455.2-204-456-455.2-456z" fill=""></path></g></svg></span>
+                </div>
+                <div id="forms">
+                    <p class="singInContent">Sign in to avail exciting <br> discounts and cashbacks!!</p>  
+                    <form class="userInputs" action="">
+                        <label for="">UserName:</label>
+                        <input type="text" placeholder="username" required minlength="6" maxlength="10">
+
+                        <label for="">Email <span class="star">*</span></label>
+                        <input type="email" placeholder="email" required > 
+
+                        <label for="">password <span class="star">*</span></label>
+                        <input type="password" placeholder="password" required minlength="6" maxlength="10">
+
+                        <label class="singIn" for="submit">Sing Up</label>
+
+                        <button class="login" onclick="logindialog()">Login!</button>
+                        
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </dialog>
+
+  <script>
+
+
+  </script>
+
+ 
+    <dialog open id="singIn">
+        <div class="mainDiv">
+            <div class="innerDiv1">
+                <p class="loginPageImgContent">Unlock the <br>Smart Way to Travel</p>
+            </div>
+            <div class="innerDiv2">
+                <div class="subDiv">
+                    <img class="loginBusLogo" src="https://s3.rdbuz.com/Images/rdc/rdc-redbus-logo.svg" alt="">
+                    <span onclick="logincloseDialog()"><svg id="closeDialogBox"  viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M332 663.2c-9.6 9.6-9.6 25.6 0 35.2s25.6 9.6 35.2 0l349.6-356c9.6-9.6 9.6-25.6 0-35.2s-25.6-9.6-35.2 0L332 663.2z" fill=""></path><path d="M681.6 698.4c9.6 9.6 25.6 9.6 35.2 0s9.6-25.6 0-35.2L367.2 307.2c-9.6-9.6-25.6-9.6-35.2 0s-9.6 25.6 0 35.2l349.6 356z" fill=""></path><path d="M516.8 1014.4c-277.6 0-503.2-225.6-503.2-503.2S239.2 7.2 516.8 7.2s503.2 225.6 503.2 503.2-225.6 504-503.2 504z m0-959.2c-251.2 0-455.2 204.8-455.2 456s204 455.2 455.2 455.2 455.2-204 455.2-455.2-204-456-455.2-456z" fill=""></path></g></svg></span>
+                </div>
+                <div id="forms">
+                    <p class="singInContent">Sign in to avail exciting <br> discounts and cashbacks!!</p>
+                    <form class="userInputs" action="">
+                        <label for="">UserName:</label>
+                        <input type="text" placeholder="username" required >
+
+                        <label for="">Email <span class="star">*</span></label>
+                        <input type="email" placeholder="email" required> 
+
+                        <label for="">password <span class="star">*</span></label>
+                        <input type="password" placeholder="password" required>
+
+                        <input type="submit" class="login" id="loginSubmit" value="Login!">
+
+                        <!-- <label class="singIn" id="singIn" for="submit">Sing In</label> -->
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <script>
+        let open = document.getElementById("singUp")
+        function opendialog(){
+            open.showModal();
+        }
+        function closeDialog(){
+            open.close()
+        }
+
+        let login = document.getElementById("singIn")
+        function logindialog(){
+            open.close()
+            login.showModal();
+        }
+
+        function logincloseDialog(){
+            login.close()
+        }
+
+    </script>
+</body>
+</html>

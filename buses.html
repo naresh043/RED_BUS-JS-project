@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 3.62vw;
+            background-color: rgb(248, 244, 244);
+            /* background-color: rgb(211, 227, 253); */
+        }
+
+        #fromTo {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 0.20rem;
+            margin-bottom: 0.05rem;
+            height: 1.20rem;
+            background-color: rgb(248, 244, 244);
+            border: 0.5px solid rgb(183, 182, 182);
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 15px;
+            }
+
+            
+        #innerDiv1,#innerDiv2{
+            display: flex;
+            padding: 0.50%;
+
+        }
+        #innerDiv1 b{
+            font-size: 0.25rem;
+        }
+        #innerDiv1 p{
+            font-size: 0.25rem;
+
+        }
+
+        #innerDiv2 b{
+            font-size: 0.35rem;
+        }
+        #innerDiv2 p{
+            font-size: 0.20rem;
+        }
+
+        #startfrom {
+            font-size: 0.40rem;
+            background-color: #f1f1f1;
+            padding: 1%;
+        }
+
+        .color {
+            color: red;
+        }
+
+        #rtc{
+            /* height: 2.50rem; */
+        }
+
+        #rtclog {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        #busDetails {
+            width: 80%;
+            margin-left: 10%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 0.5px solid rgb(183, 182, 182);
+            margin-bottom: 1rem;
+            background-color: white;
+            padding: 0.2rem;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 15px;
+        }
+
+        .rtcMainDiv {
+            background-color: #ab9090;
+        }
+
+        #busDetailsDiv0 {
+            width: 5%;
+
+        }
+
+        #busDetails:hover {
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 50px;
+
+            /* box-shadow: inset 1px 1px 0 #aaa, ; */
+        }
+
+        #busDetailsDiv1 {
+            width: 20%;
+            margin-bottom: 0.5rem;
+        }
+
+        #busDetails p {
+            font-size: 0.30rem;
+            margin-top: 0.15rem;
+        }
+
+        #busDetails b {
+            font-size: 0.35rem;
+        }
+
+        .busAccessories {
+            width: 0.40rem;
+            height: 0.40rem;
+        }
+
+        #busDetailsDiv5,
+        #busDetailsDiv6,
+        #busDetailsDiv7 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #ratingGreen {
+            background-color: green;
+            color: white;
+        }
+
+        .btn {
+            font-size: 0.25rem;
+            background-color: rgb(233, 85, 93);
+            color: white;
+            border: none;
+            padding: 5% 12% 5% 12%;
+            font-weight: 550;
+            cursor: pointer;
+        }
+        #busDetailsDiv8{
+            /* border: 1px solid; */
+            line-height: 0.40rem;
+        }
+        .rtcMainDiv{
+            background-color: #f8f4f4;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="fromTo"></div>
+    <div id="rtc"></div>
+    <div id="mainDiv"></div>
+    <script>
+        let rtc = [
+            {
+                logo: "https://st.redbus.in/Images/carousel/TSRTC.png",
+                title: "TSRTC Buses",
+                off: "Get up to Rs 250 off on TSRTC",
+                buses: "8 buses",
+                rate: "Starts from",
+                money: "INR 500",
+            },
+
+            {
+                logo: "https://st.redbus.in/buslogos/country/ind/logo_group/10283.png",
+                title: "APSRTC Buses",
+                off: "Book your choice of bus on RTC",
+                buses: "5 buses",
+                rate: "starts from",
+                money: "INR 580",
+
+            },
+
+        ]
+        let bus = [
+            {
+                logo: "https://s3.rdbuz.com/Images/webplatform/india/primo/primoLogo.svg",
+                type: "NON A/C Sleeper(2+1)",
+                title: "Kamakshi Travels",
+                boardingTime: "21:30",
+                boardingPlace: "Madhapur",
+                totalHours: "09h 30m",
+                dropingTime: "07:00 ",
+                dropingPlace: "Mumbai",
+                rating: "✰4.3",
+                rate: "Start from",
+                money: "INR 650",
+                seats: "15 Seats available",
+                single: "9 Seats Available"
+            },
+
+            {
+                logo: "https://s2.rdbuz.com/buslogos/country/SGP/logo/16188.png",
+                type: "NON A/C Sleeper(2+1)",
+                title: "StarMart Travels",
+                boardingTime: "21:40",
+                boardingPlace: "Madhapur",
+                totalHours: "09h 30m",
+                dropingTime: "07:50 ",
+                dropingPlace: "Mumbai",
+                rating: "✰3.9",
+                rate: "Start from",
+                money: "INR 620",
+                seats: "14 Seats available",
+                single: "17 Single"
+            },
+            {
+                logo: "https://s3.rdbuz.com/Images/webplatform/india/primo/primoLogo.svg",
+                type: "NON A/C Sleeper(2+1)",
+                title: "KAMAKSHI Travels",
+                boardingTime: "21:50",
+                boardingPlace: "Madhapur",
+                totalHours: "09h 30m",
+                dropingTime: "07:20 ",
+                dropingPlace: "Mumbai",
+                rating: "✰4.7",
+                rate: "Start from",
+                money: "INR 700",
+                seats: "19 Seats available",
+                single: "11 Single"
+
+            },
+            {
+                logo: "https://s2.rdbuz.com/buslogos/country/SGP/logo/29032.png",
+                type: "NON A/C Sleeper(2+1)",
+                title: "Transtar Travels",
+                boardingTime: "22:00",
+                boardingPlace: "Madhapur",
+                totalHours: "10h 10m",
+                dropingTime: "07:50 ",
+                dropingPlace: "Mumbai",
+                rating: "✰4.1",
+                rate: "Start from",
+                money: "INR 690",
+                seats: "22 Seats available",
+                single: "14 Single"
+            },
+            {
+                logo: "https://s2.rdbuz.com/buslogos/country/SGP/logo/24221.png",
+                type: "NON A/C Sleeper(2+1)",
+                title: "RAJA BUSES",
+                boardingTime: "22:10",
+                boardingPlace: "Madhapur",
+                totalHours: "09h 50m",
+                dropingTime: "07:50 ",
+                dropingPlace: "Mumbai",
+                rating: "✰3.9",
+                rate: "Starts from",
+                money: "INR 550",
+                seats: "11 Seats available",
+                single: "9 Single"
+            },
+            {
+                logo: "https://s2.rdbuz.com/buslogos/country/SGP/logo/16156.png",
+                type: "NON A/C Sleeper(2+1)",
+                title: "KAVERI Travels",
+                boardingTime: "22:50",
+                boardingPlace: "Madhapur",
+                totalHours: "09h 50m",
+                dropingTime: "08:00 ",
+                dropingPlace: "Mumbai",
+                rating: "✰4.0",
+                rate: "Starts from",
+                money: "INR 620",
+                seats: "15 Seats available",
+                single: "13 Single"
+            },
+            {
+                logo: "https://s2.rdbuz.com/buslogos/country/SGP/logo/29032.png",
+                type: "NON A/C Sleeper(2+1)",
+                title: "ANISH Travels",
+                boardingTime: "22:55",
+                boardingPlace: "Madhapur",
+                totalHours: "09h 30m",
+                dropingTime: "08:30 ",
+                dropingPlace: "Mumbai",
+                rating: "✰3.8",
+                rate: "Starts from",
+                money: "INR 580",
+                seats: "14 Seats available",
+                single: "21 Single"
+            },
+            {
+                type: "NON A/C Sleeper(2+1)",
+                logo: "https://s3.rdbuz.com/Images/webplatform/india/primo/primoLogo.svg",
+                title: "Kamakshi Travels",
+                boardingTime: "23:00",
+                boardingPlace: "Madhapur",
+                totalHours: "09h 30m",
+                dropingTime: "08:50 ",
+                dropingPlace: "Mumbai",
+                rating: "✰4.3",
+                rate: "Starts from",
+                money: "INR 680",
+                seats: "09 Seats available",
+                single: "16 Single"
+            },
+            {
+                logo: "https://s2.rdbuz.com/buslogos/country/MYS/logo/22609.png",
+                type: "NON A/C Sleeper(2+1)",
+                title: "SK BUS TRAVELS",
+                boardingTime: "23:05",
+                boardingPlace: "Madhapur",
+                totalHours: "09h 30m",
+                dropingTime: "08:20 ",
+                dropingPlace: "Mumbai",
+                rating: "✰4.0",
+                rate: "Starts from",
+                money: "INR 670",
+                seats: "15 Seats available",
+                single: "15 Single"
+            },
+            {
+                logo: "https://s2.rdbuz.com/buslogos/country/SGP/logo/24221.png",
+                type: "NON A/C Sleeper(2+1)",
+                title: "SAI PRASANNA TRAVELS",
+                boardingTime: "23:30",
+                boardingPlace: "Madhapur",
+                totalHours: "09h 30m",
+                dropingTime: "09:00 ",
+                dropingPlace: "Mumbai",
+                rating: "✰4.2",
+                rate: "Starts from",
+                money: "INR 720",
+                seats: "11 Seats available",
+                single: "14 Single"
+            },
+            {
+                logo: "https://s2.rdbuz.com/buslogos/country/SGP/logo/16156.png",
+                type: "NON A/C Sleeper(2+1)",
+                title: "AMAR Travels",
+                boardingTime: "23:50",
+                boardingPlace: "Madhapur",
+                totalHours: "07h 30m",
+                dropingTime: "07:00 ",
+                dropingPlace: "Mumbai",
+                rating: "✰5.0",
+                rate: "Starts from",
+                money: "INR 999",
+                seats: "02 Seats available",
+                single: "11 Single"
+            },
+            {
+                logo: "https://s2.rdbuz.com/buslogos/country/SGP/logo/16156.png",
+                type: "NON A/C Sleeper(2+1)",
+                title: "SRIPATHI Travels",
+                boardingTime: "23:55",
+                boardingPlace: "Madhapur",
+                totalHours: "09h 30m",
+                dropingTime: "08:00 ",
+                dropingPlace: "Mumbai",
+                rating: "✰4.8",
+                rate: "Starts from",
+                money: "INR 899",
+                seats: "12 Seats available",
+                single: "9 Single"
+            }
+        ]
+        
+
+
+        let userData = JSON.parse(localStorage.getItem("userData"))
+        console.log(userData)
+
+        let fromTo = document.getElementById("fromTo");
+
+            fromTo.innerHTML=`<div id = "innerDiv1"> <b>Bus Ticket > </b> <p>${userData.from}</p> <p>To</p> <p>${userData.to}</p></div>
+                              <div id = "innerDiv2" ><b>${userData.from.toUpperCase()}</b>&nbsp;<b>to</b>&nbsp;<b>${userData.to.toUpperCase()}</b></div>`
+            
+
+        let rtcBus = document.getElementById("rtc");
+        rtc.map((data) => {
+            rtcBus.innerHTML += `<div id="busDetails" class="rtcMainDiv">
+                <div id=busDetailsDiv0>
+                    <img id="rtclog" src="${data.logo}">
+                    </div><div id="busDetailsDiv1">
+                        <b id="bold">${data.title}</b></div>
+                        <div id="busDetailsDiv3"> 
+                            <p>${data.off}</p></div>
+                            <div id="busDetailsDiv8">
+                                <p>${data.rate}</p> 
+                                <b>${data.money}</b>
+                                <button class = "btn">VIEW SEATS</button>
+                                </div></div>`
+        })
+
+
+
+        let div = document.getElementById("mainDiv");
+        bus.map((data, index) => {
+            div.innerHTML += `<div id="busDetails"> <div id=busDetailsDiv0><img  src="${data.logo}"></div> <div id="busDetailsDiv1"><b id="bold">${data.title}</b><p>${data.type}</p></div> <div id="busDetailsDiv2"><b>${data.boardingTime}</b><p>${userData.from.toUpperCase()}</p></div>
+                                <div id="busDetailsDiv3"> <p>${data.totalHours}</p></div> <div id="busDetailsDiv4"><b>${data.dropingTime}</b><p>${userData.to.toUpperCase()}</p></div>
+                                <div id="busDetailsDiv5"><p id = "ratingGreen">
+                                    ${data.rating}</p></div>
+                                     <div id="busDetailsDiv6">
+                                    <p>${data.rate}</p>
+                                    <b>${data.money}</b></div>
+                                    <div id="busDetailsDiv8">
+                                    <p>${data.seats}</p>
+                                    <p>${data.single}</p>
+                                    <button class = "btn">VIEW SEATS</button>
+
+
+                                    </div>                                
+                            </div>`
+
+                            
+            console.log(data.title)
+        })
+        document.body.append(div)
+
+        let buttons = document.getElementsByClassName("btn");
+        console.log(buttons)
+
+        for(i=0;i<14;i++){
+
+            buttons[i].addEventListener("click",()=>{
+                window.location.assign("./seating.html")
+            })
+        }        
+
+    </script>
+</body>
+
+</html>

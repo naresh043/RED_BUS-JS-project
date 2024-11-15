@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        * {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 3.62vw;
+   background-color: rgb(248, 244, 244);
+   /* background-color: rgb(211, 227, 253); */
+
+}
+#fromTo{
+    width: 100%;
+    height: 4rem;
+    border: 1px solid;
+}
+#startfrom{
+    font-size: 0.40rem;
+    background-color: #f1f1f1;
+    padding: 1%;
+}
+.color{
+    color: red;
+}
+#busDetails{
+    display: flex;
+    justify-content: space-around;
+}
+#busDetails p{
+    font-size: 0.30rem;
+    margin-top: 0.15rem;
+}
+#busDetails b{
+    font-size: 0.35rem;  
+}
+.busAccessories{
+    width: 0.40rem;
+    height: 0.40rem;
+}
+#busDetailsDiv5,#busDetailsDiv6,#busDetailsDiv7{
+    margin-top: 0.45rem;
+}
+#ratingGreen{
+    background-color: green;
+    color: white;
+}
+.btn{
+    font-size: 0.25rem;
+    background-color: rgb(233, 85, 93);
+    color: white;
+    border: none;
+    padding: 5% 12% 5% 12%;
+    font-weight: 550;
+}
+#seatsMainDiv{
+    width: 100%;
+    height: 9rem;
+    display: grid;
+    grid-template-columns: 60% 40% ;
+    grid-template-rows: 5rem 4rem;
+    border: 1px solid;
+    display: none;
+    
+}
+#seating{
+    width: 100%;
+    height: 9rem;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    /* border: 1px solid; */
+    padding-left: 1rem;
+
+}
+#seatLegend{
+    width: 100%;
+    height: 4rem;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    /* border: 1px solid; */
+    padding: 2%;
+}
+#amount{
+    width: 100%;
+    height: 4rem;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: grid;
+}
+#amount>span{
+    width: 100%;
+}
+#amount b{
+    font-size: 0.40rem;
+    padding:5%;
+    /* font-weight: 600; */
+    color:rgb(233, 85, 93);
+}
+#amount li{
+    font-size: 0.35rem;
+    padding:5%;
+
+}
+#amount button{
+    font-size: 0.30rem;
+    text-align: center;
+    background-color: rgb(233, 85, 93);
+    border: none;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 0.10rem;
+    width: 70%;
+    height: 0.50rem;
+}
+#totalAmount{
+    font-size: 0.35rem;
+    grid-column: 1/3;
+    display: flex;
+}
+#Numseats{
+    font-size: 0.30rem;
+    grid-column: 1/3;
+    display: flex;
+    display: inline;
+}
+#numseatZero{
+    font-size: 0.30rem;
+}
+
+#seatLegend>b{
+font-size: 0.35rem;  
+}
+#seatLegend>span{
+    display: inline-block;
+    width: 8%;
+    height: 8.5%;
+    margin-left: 0.15rem;
+}
+#seatLegend>p{
+    font-size: 0.35rem;
+    display: inline-block;
+    margin-left: 0.15rem;
+}
+#seatBoarder1{
+    border: 1px solid green;
+}
+#seatBoarder2{
+    background-color: grey;
+}
+#seatBoarder3{
+    border: 1px solid palevioletred;
+}
+#seatBoarder4{
+    border: 1px solid skyblue;
+}
+#seating>p{
+    font-size: 0.38rem;
+}
+#skyblueTitle{
+    width: 70%;
+    font-size: 0.38rem;
+    padding: 1%;
+    background-color: skyblue; 
+    margin-bottom: 3%;
+    margin-bottom: 0.50rem;
+}
+
+.busseatsSteering{
+display: flex;
+ border: 1px solid;
+ width: 70%;
+}
+
+
+
+#seatingLower{
+    width: 100%;
+    height: 3rem;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 0px;
+}
+#steering{
+    border-bottom: 1px solid;
+}
+.seats{
+    width: 0.60rem;
+    height: 0.60rem;
+    transform: rotate(-270deg);
+}
+#seatingLower>span{
+    width: 0.70rem;
+    height: 0.90rem;
+    margin-left: 0.20rem;
+}
+
+#seatingUpper{
+    width: 100%;
+    height: 3rem;
+    border-left: 1px solid;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    padding: 0.25rem;
+}
+#seatingUpper>span{
+width: 1.30rem;
+height: 0.50rem;
+border: 1px solid;
+}
+#upperDeck{
+    /* margin-top: 0.50rem; */
+}
+.steeingDiv{
+    padding: 0.2rem;
+}
+#zero{
+    display: inline;
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+#payDialog{
+                top: 10%;
+                left: 68%;
+                width: 30%;
+                height: 100vh;
+                height: 15rem;
+                border: none;
+                border: 1px solid #e0e0e0;
+
+            }
+            #mainPayDiv{
+            }
+            #mainPayDiv b{
+                font-size: 0.35rem;
+                margin: 0;
+            }
+            html p{
+                margin: 0;
+            }
+            #payInnerDiv{
+                border: 1px solid #e0e0e0;
+                padding: 0.20rem;
+
+
+
+            }
+            #payInnerDiv p{
+                font-size: 0.30rem; 
+            }
+
+            #payInnerDiv label{
+                font-size: 0.30rem;
+            }
+            #payId,#payState,#age, #payMobile{
+                width: 140%;
+                height: 0.50rem;
+            }
+            #payButton{
+                font-size: 0.30rem;
+                width: 40%;
+                font-weight: 600;
+                background-color: rgb(233, 85, 93);
+                color: white;
+                border: none;
+                padding: 0.15rem;
+                margin-left: 30%;
+            }
+            #cancelPay{
+                float: right;
+                margin-top: 0.50rem;
+                font-size: 0.50rem;
+            }
+            #submit{
+                background-color: rgb(233, 85, 93);
+                color: white;
+                border: none;
+                font-size: 0.25rem ;
+                cursor: pointer;
+
+            }
+            button{
+                cursor: pointer;
+            }
+            
+            input{
+                font-size: 0.35rem;
+            }
+
+    </style>
+</head>
+<body>
+    <div id="fromTo">
+        <p id="startfrom"></p>
+        <div id="busDetails">
+            <div id="busDetailsDiv1">
+                <b id="bold">TSRTC - 9963</b>
+                <p>SUPER LUXURY (NON-AC, 2 + 2 PUSH BACK)</p>
+               <span>
+                <svg class="busAccessories" fill="#000000"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M478.609,225.48v-86.35c0-46.03-37.448-83.478-83.478-83.478H116.87c-46.03,0-83.478,37.448-83.478,83.478v86.35 C13.959,232.372,0,250.93,0,272.696c0,12.589,0,89.885,0,100.174c0,9.22,7.475,16.696,16.696,16.696h16.696v50.087 c0,9.22,7.475,16.696,16.696,16.696h66.783c9.22,0,16.696-7.475,16.696-16.696v-50.087h244.87v50.087 c0,9.22,7.475,16.696,16.696,16.696h66.783c9.22,0,16.696-7.475,16.696-16.696v-50.087h16.696c9.22,0,16.696-7.475,16.696-16.696 c0-9.493,0-86.461,0-100.174C512,250.93,498.041,232.372,478.609,225.48z M66.783,139.13c0-27.618,22.469-50.087,50.087-50.087 H395.13c27.618,0,50.087,22.469,50.087,50.087v83.478h-33.391v-16.696c0-27.618-22.469-50.087-50.087-50.087h-72.348 c-12.819,0-24.523,4.846-33.391,12.794c-8.869-7.948-20.572-12.794-33.391-12.794h-72.348c-27.618,0-50.087,22.469-50.087,50.087 v16.696H66.783V139.13z M378.435,205.913v16.696H272.696v-16.696c0-9.206,7.49-16.696,16.696-16.696h72.348 C370.945,189.217,378.435,196.707,378.435,205.913z M239.304,205.913v16.696H133.565v-16.696c0-9.206,7.49-16.696,16.696-16.696 h72.348C231.815,189.217,239.304,196.707,239.304,205.913z M100.174,422.957H66.783v-33.391h33.391V422.957z M445.217,422.957 h-33.391v-33.391h33.391V422.957z M478.609,356.174c-14.401,0-412.865,0-445.217,0v-33.391h445.217V356.174z M478.609,289.391 H33.391v-16.696c0-9.206,7.49-16.696,16.696-16.696c12.832,0,401.17,0,411.826,0c9.206,0,16.696,7.49,16.696,16.696V289.391z"></path> </g> </g> </g></svg>
+                <svg class="busAccessories" fill="#000000" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M4.4550781 6.0878906C4.1307314 6.0696775 3.8086337 6.0738 3.4960938 6.1152344C2.8716028 6.1980254 2.2863647 6.4277601 1.7988281 6.9121094C1.3352804 7.371365 1.1599955 7.9909111 1.1328125 8.5371094C1.1056295 9.0833076 1.1957605 9.6083488 1.3105469 10.140625C1.5401192 11.205177 1.8923635 12.313128 2.0078125 13.248047C2.115328 14.117805 1.9011917 15.707705 1.6152344 17.734375C1.3292771 19.761045 1 22.253246 1 25.125C1 26.513069 1.2216435 28.781904 2.0917969 31.136719C2.3127515 31.734668 2.5792485 32.339282 2.8945312 32.933594C2.9951944 34.246041 2.2452125 35.928234 1.8789062 37.759766C1.7974743 38.165295 1.4350895 39.132296 1.2207031 40.132812C1.113428 40.633454 1.0381572 41.159655 1.0859375 41.710938C1.1337175 42.26222 1.3302666 42.873787 1.7988281 43.337891L1.8007812 43.339844C2.7801118 44.305782 4.148877 44.255107 5.4355469 44.052734C6.7222167 43.850361 8.0776021 43.423378 9.2714844 43.087891C12.219761 42.258879 17.72846 43.066406 24.466797 43.066406L25 43.066406L25.533203 43.066406C28.972774 43.066406 32.073083 42.832326 34.695312 42.732422C35.5109 42.701742 36.279125 42.684603 36.994141 42.689453C38.487974 42.699153 39.752375 42.813488 40.728516 43.087891C41.922398 43.423378 43.277657 43.852316 44.564453 44.054688C45.851249 44.257058 47.219478 44.307314 48.199219 43.341797C48.90232 42.648688 48.95091 41.706532 48.869141 40.990234C48.787371 40.273937 48.578095 39.631715 48.488281 39.255859C48.352033 38.685547 48.072409 38.130872 47.71875 37.419922C47.656285 37.294349 47.57448 37.13724 47.507812 37.005859C47.660834 35.958533 48.005145 33.86431 48.335938 31.564453C48.683115 29.150677 49 26.671934 49 25.125C49 22.253246 48.670723 19.761045 48.384766 17.734375C48.098808 15.707705 47.884671 14.117805 47.992188 13.248047C48.107636 12.313128 48.459881 11.205177 48.689453 10.140625C48.804239 9.6083488 48.89437 9.0833076 48.867188 8.5371094C48.840007 7.9909111 48.66472 7.371365 48.201172 6.9121094C47.713635 6.4277601 47.128397 6.1980251 46.503906 6.1152344C45.878826 6.0323654 45.215693 6.0960396 44.572266 6.1972656C43.285411 6.3997184 41.927903 6.8272213 40.730469 7.1621094C37.779516 7.9881314 32.271139 7.1835938 25.533203 7.1835938L25 7.1835938L24.466797 7.1835938C22.858525 7.1835938 19.056754 7.0593241 15.248047 8.3808594C13.504171 8.4070292 10.70998 7.5655994 9.2695312 7.1621094C8.0720976 6.8272213 6.7145892 6.3997184 5.4277344 6.1972656C5.1060207 6.1466525 4.7794249 6.1061037 4.4550781 6.0878906 z M 4.3964844 8.1015625C4.6110037 8.1090861 4.8513387 8.1320038 5.1171875 8.1738281C6.1805827 8.3411254 7.4929024 8.7417787 8.7304688 9.0878906C9.4660022 9.2939239 10.656875 9.6623215 11.962891 9.9570312C10.569411 10.845201 9.2645575 12.003757 8.1816406 13.550781L9.8183594 14.699219C13.842904 8.9498692 21.621696 9.1835937 24.466797 9.1835938L25 9.1835938L25.533203 9.1835938C32.093267 9.1835938 37.468484 10.151869 41.269531 9.0878906C42.507097 8.7417787 43.819417 8.3411254 44.882812 8.1738281C45.946208 8.0065309 46.608591 8.1466541 46.792969 8.3300781L46.792969 8.3320312L46.794922 8.3320312C46.817372 8.3542753 46.857161 8.3961361 46.869141 8.6367188C46.881111 8.8773016 46.832461 9.2639012 46.734375 9.71875C46.538197 10.628448 46.157364 11.790872 46.007812 13.001953C45.836329 14.389195 46.120504 16.002342 46.404297 18.013672C46.688042 20.025004 47 22.405754 47 25.125C47 26.377066 46.698791 28.892323 46.355469 31.279297C46.197583 32.377006 46.10185 32.964372 45.955078 33.908203C45.759375 33.489676 45.579531 33.083297 45.431641 32.708984C45.148421 31.992153 45 31.360333 45 31.125L43 31.125C43 31.889667 43.249391 32.62616 43.572266 33.443359C43.89514 34.260559 44.312473 35.131524 44.736328 35.974609C45.160183 36.817695 45.59055 37.632716 45.927734 38.310547C46.264919 38.988378 46.509717 39.581515 46.542969 39.720703C46.664155 40.227847 46.832332 40.774595 46.882812 41.216797C46.933293 41.658999 46.867775 41.846124 46.796875 41.916016C46.605615 42.104499 45.937704 42.245254 44.875 42.078125C43.812296 41.910996 42.504602 41.510576 41.271484 41.164062C40.013625 40.810465 38.59198 40.699747 37.007812 40.689453C36.248829 40.684353 35.453506 40.703065 34.621094 40.734375L34.619141 40.734375C31.93937 40.836471 28.881633 41.066406 25.533203 41.066406L25 41.066406L24.466797 41.066406C17.907134 41.066406 12.530239 40.093124 8.7285156 41.162109C7.4954479 41.508627 6.1875802 41.909045 5.125 42.076172C4.0634933 42.24313 3.3984681 42.103791 3.2070312 41.916016L3.2050781 41.916016C3.1485691 41.859616 3.0987171 41.774698 3.078125 41.537109C3.057405 41.298048 3.0920562 40.941516 3.1757812 40.550781C3.343231 39.769313 3.685909 38.919409 3.8398438 38.150391C3.998987 37.354674 4.3575633 36.430943 4.6191406 35.416016C5.3274841 36.19704 6.1697708 36.900725 7.1699219 37.472656L8.1640625 35.736328C6.0174469 34.508798 4.7298466 32.503044 3.96875 30.443359C3.2076534 28.383674 3 26.288931 3 25.125C3 22.405754 3.3119104 20.025001 3.5957031 18.013672C3.8794958 16.002342 4.163672 14.389195 3.9921875 13.001953C3.8426365 11.790872 3.4618027 10.628448 3.265625 9.71875C3.1675362 9.2639012 3.1188861 8.8773016 3.1308594 8.6367188C3.1428326 8.3961357 3.1826259 8.3542757 3.2050781 8.3320312L3.2070312 8.3320312L3.2070312 8.3300781C3.345317 8.1925077 3.7529264 8.0789918 4.3964844 8.1015625 z"></path></g></svg>
+                <svg class="busAccessories" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>charger_round [#697]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-100.000000, -5119.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M59.969,4967.056 C59.969,4970.196 57.543,4972.747 54.468,4973 L53.467,4973 C50.393,4972.747 47.969,4970.211 47.969,4967.072 C47.969,4967.031 47.974,4967 47.975,4967 L59.963,4967 C59.963,4967 59.969,4967.016 59.969,4967.056 M63,4965 L58,4965 L58,4960 C58,4959.447 57.553,4959 57,4959 C56.448,4959 56,4959.447 56,4960 L56,4965 L52,4965 L52,4960 C52,4959.447 51.553,4959 51,4959 C50.448,4959 50,4959.447 50,4960 L50,4965 L45,4965 C44.448,4965 44,4965.447 44,4966 C44,4966.552 44.448,4967 45,4967 L45.975,4967 C45.974,4967 45.985,4967.016 45.985,4967.056 C45.985,4971.135 49,4974.467 53,4974.956 L53,4979 L55,4979 L55,4974.956 C59,4974.469 61.985,4971.151 61.985,4967.072 C61.985,4967.031 61.964,4967 61.964,4967 L63,4967 C63.553,4967 64,4966.552 64,4966 C64,4965.447 63.553,4965 63,4965" id="charger_round-[#697]"> </path> </g> </g> </g> </g></svg>
+               </span>
+            </div>
+            <div id="busDetailsDiv2">
+                <b>21:45</b>
+                <p id="fromMain"></p>
+            </div>
+            <div id="busDetailsDiv3"> <b>09h 15m</b></div>
+            <div id="busDetailsDiv4">
+                <b>07:00</b>
+                <p>06-Aug</p>
+                <p id="toMain"></p>
+            </div>
+            <div id="busDetailsDiv5"> <p id="ratingGreen"><svg class="busAccessories" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.2691 4.41115C11.5006 3.89177 11.6164 3.63208 11.7776 3.55211C11.9176 3.48263 12.082 3.48263 12.222 3.55211C12.3832 3.63208 12.499 3.89177 12.7305 4.41115L14.5745 8.54808C14.643 8.70162 14.6772 8.77839 14.7302 8.83718C14.777 8.8892 14.8343 8.93081 14.8982 8.95929C14.9705 8.99149 15.0541 9.00031 15.2213 9.01795L19.7256 9.49336C20.2911 9.55304 20.5738 9.58288 20.6997 9.71147C20.809 9.82316 20.8598 9.97956 20.837 10.1342C20.8108 10.3122 20.5996 10.5025 20.1772 10.8832L16.8125 13.9154C16.6877 14.0279 16.6252 14.0842 16.5857 14.1527C16.5507 14.2134 16.5288 14.2807 16.5215 14.3503C16.5132 14.429 16.5306 14.5112 16.5655 14.6757L17.5053 19.1064C17.6233 19.6627 17.6823 19.9408 17.5989 20.1002C17.5264 20.2388 17.3934 20.3354 17.2393 20.3615C17.0619 20.3915 16.8156 20.2495 16.323 19.9654L12.3995 17.7024C12.2539 17.6184 12.1811 17.5765 12.1037 17.56C12.0352 17.5455 11.9644 17.5455 11.8959 17.56C11.8185 17.5765 11.7457 17.6184 11.6001 17.7024L7.67662 19.9654C7.18404 20.2495 6.93775 20.3915 6.76034 20.3615C6.60623 20.3354 6.47319 20.2388 6.40075 20.1002C6.31736 19.9408 6.37635 19.6627 6.49434 19.1064L7.4341 14.6757C7.46898 14.5112 7.48642 14.429 7.47814 14.3503C7.47081 14.2807 7.44894 14.2134 7.41394 14.1527C7.37439 14.0842 7.31195 14.0279 7.18708 13.9154L3.82246 10.8832C3.40005 10.5025 3.18884 10.3122 3.16258 10.1342C3.13978 9.97956 3.19059 9.82316 3.29993 9.71147C3.42581 9.58288 3.70856 9.55304 4.27406 9.49336L8.77835 9.01795C8.94553 9.00031 9.02911 8.99149 9.10139 8.95929C9.16534 8.93081 9.2226 8.8892 9.26946 8.83718C9.32241 8.77839 9.35663 8.70162 9.42508 8.54808L11.2691 4.41115Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> 4.1</p>
+            <p><svg class="busAccessories" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13 20V18C13 15.2386 10.7614 13 8 13C5.23858 13 3 15.2386 3 18V20H13ZM13 20H21V19C21 16.0545 18.7614 14 16 14C14.5867 14 13.3103 14.6255 12.4009 15.6311M11 7C11 8.65685 9.65685 10 8 10C6.34315 10 5 8.65685 5 7C5 5.34315 6.34315 4 8 4C9.65685 4 11 5.34315 11 7ZM18 9C18 10.1046 17.1046 11 16 11C14.8954 11 14 10.1046 14 9C14 7.89543 14.8954 7 16 7C17.1046 7 18 7.89543 18 9Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>98</p>
+            </div>
+            <div id="busDetailsDiv6">
+                <p>Starts From</p>
+                <p>INR <b>500</b></p>
+            </div>
+            <div id="busDetailsDiv7">
+                <p><b>19</b> Seats Available</p>
+                <p><b>4</b> Single</p>
+                <button class="btn" onclick="seatingOpen()"> VIEW SEATS</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="seatsMainDiv">
+        <div id="seating">
+            <p id="skyblueTitle">Click on an Available seat to proceed with your transaction.</p>
+            <p>Lower Deck</p>
+            <div class="busseatsSteering">
+            <div class="steeingDiv">
+                <svg id="steering" class="seats"  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000000" d="M256 25C128.3 25 25 128.3 25 256s103.3 231 231 231 231-103.3 231-231S383.7 25 256 25zm0 30c110.9 0 201 90.1 201 201s-90.1 201-201 201S55 366.9 55 256 145.1 55 256 55zM80.52 203.9c-4.71 19.2-7.52 37-7.52 54 144.7 30.3 121.5 62.4 148 177.8 11.4 2.1 23 3.3 35 3.3s23.6-1.2 35-3.3c26.5-115.4 3.3-147.5 148-177.8-.6-18.9-3-38.4-7.5-54C346.7 182.7 301.1 172 256 172c-45.1 0-90.7 10.7-175.48 31.9zM256 183c40.2 0 73 32.8 73 73s-32.8 73-73 73-73-32.8-73-73 32.8-73 73-73zm0 18c-30.5 0-55 24.5-55 55s24.5 55 55 55 55-24.5 55-55-24.5-55-55-55z"></path></g></svg>            
+            </div>
+            <div id="seatingLower"></div>
+           </div>
+
+            <p id="upperDeck">Upper Deck</p>
+            <div class="busseatsSteering">
+            <div class="steeingDiv">
+                <svg id="steering" class="seats"  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000000" d="M256 25C128.3 25 25 128.3 25 256s103.3 231 231 231 231-103.3 231-231S383.7 25 256 25zm0 30c110.9 0 201 90.1 201 201s-90.1 201-201 201S55 366.9 55 256 145.1 55 256 55zM80.52 203.9c-4.71 19.2-7.52 37-7.52 54 144.7 30.3 121.5 62.4 148 177.8 11.4 2.1 23 3.3 35 3.3s23.6-1.2 35-3.3c26.5-115.4 3.3-147.5 148-177.8-.6-18.9-3-38.4-7.5-54C346.7 182.7 301.1 172 256 172c-45.1 0-90.7 10.7-175.48 31.9zM256 183c40.2 0 73 32.8 73 73s-32.8 73-73 73-73-32.8-73-73 32.8-73 73-73zm0 18c-30.5 0-55 24.5-55 55s24.5 55 55 55 55-24.5 55-55-24.5-55-55-55z"></path></g></svg>            
+            </div>
+            <div id="seatingUpper"></div>
+            </div>
+        </div>
+        <div id="seatLegend">
+            <b>SEAT LEGEND</b> <br>
+            <span id="seatBoarder1"></span><p> Available</p>
+            <span id="seatBoarder2"></span><p>Unavailable</p> <br>
+            <span id="seatBoarder3"></span><p>Female</p>&nbsp;
+            <span id="seatBoarder4"></span><p>Male</p>
+        </div>
+
+        <div id="amount">
+            <span><b>BOARDING POINT</b> <li id="boardingPoint"></li> </span>
+            <span><b>DROPPING POINT</b><li id="droppingPoint"></li></span>
+            <!-- <span id="Numseats">No.of selected Seats:-<span id="selectedSeats">0<span></span> -->
+            <span id="totalAmount">Amount <small>( Taxes will be calculated during payment ): Rs&nbsp;<span id="zero">0</span>/-</small></span>
+            <button onclick="paymentDialog()">Procced to pay</button>
+        </div>
+
+        <dialog id="payDialog">
+            <div id="mainPayDiv">
+                <b><span class="material-symbols-outlined">account_circle</span>Passenger Information</b><span id="cancelPay" onclick="payClose()" class="material-symbols-outlined">cancel</span>
+            </div>
+            <button id="payButton">PROCEED TO PAY</button>
+        </dialog>
+
+
+        <!-- <script>
+            let seatingLower = document.getElementById("seatingLower");
+            let seats = document.getElementById("seat1")
+    
+            for (let i = 0; i < 10; i++) {
+             seatingLower.appendChild(seats)
+                // seatingLower.appendChild(`seats`) -->
+                <!-- console.log(seats)
+                // seats[i].addEventListener('click', function() {
+                    console.log('Seat clicked:', seats[i]);
+                    // Example: toggle seat color
+                    // if (seats[i].style.fill === 'red') {
+// /                    } else {
+                        // seats[i].style.fill = 'red'; // mark as unavailable
+                    // }
+                // }); -->
+            <!-- }
+        </script> -->
+
+     <script>
+
+    let userData = JSON.parse(localStorage.getItem("userData"))
+    console.log(userData)
+    let from = document.getElementById("startfrom")
+    from.innerHTML =`<b><span class="color">START FROM </span> ${userData.from.toUpperCase()}</b> > ${userData.to.toUpperCase()}`
+
+    let fromMain = document.getElementById("fromMain");
+    fromMain.innerHTML = `${userData.from}`
+
+    let boardingPoint = document.getElementById("boardingPoint");
+    boardingPoint.innerHTML=`${userData.from}`
+
+    let droppingPoint = document.getElementById("droppingPoint");
+    droppingPoint.innerHTML= `${userData.to}`
+
+    let toMain = document.getElementById("toMain");
+    toMain.innerHTML=`${userData.to}`
+
+    let zero = document.getElementById("zero")
+    let total = 0
+
+    let selectedSeats = document.getElementById("selectedSeats")
+
+
+            let count = 0
+            function callBack(){
+                count++
+                localStorage.setItem("seatCount", count);
+            }
+    
+
+    let lower = document.getElementById('seatingLower');
+    console.log(lower)
+    for(let i=0;i<=29;i++){ 
+        let span = document.createElement("span")
+        span.id = `seating${i}`
+        let min = 1;
+        let max = 250;
+        span.innerHTML = `<svg fill="#000000" class="seats" id="seat1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M460.058,207.774v-89.116C460.058,53.103,406.904,0,341.349,0H170.651C105.096,0,51.942,53.103,51.942,118.658v89.115 c-27.208,0.753-49.469,23.185-49.469,50.669v235.234c0,10.246,8.306,18.323,18.551,18.323H131.76 c10.245,0,19.12-8.077,19.12-18.322v-5.176h210.242v5.176c0,10.245,8.875,18.322,19.12,18.322h110.735 c10.245,0,18.551-8.077,18.551-18.322V258.444C509.527,230.959,487.266,208.527,460.058,207.774z M113.778,474.899H39.575V258.444 c0-7.502,6.103-13.574,13.604-13.574h46.426c7.501,0,14.173,6.072,14.173,13.574V474.899z M361.121,451.401H150.879v-92.754 h210.242V451.401z M361.121,258.444v35.894H150.879v-35.894c0-27.96-23.316-50.676-51.274-50.676H89.043v-89.11 c0-45.097,36.51-81.556,81.607-81.556h170.698c45.098,0,81.608,36.46,81.608,81.556v89.11h-10.562 C384.437,207.768,361.121,230.484,361.121,258.444z M472.425,474.899h-74.203V258.444c0-7.501,6.672-13.574,14.173-13.574h46.426 c7.501,0,13.604,6.072,13.604,13.574V474.899z"></path> </g> </g> </g></svg>`
+        lower.appendChild(span) 
+        span.addEventListener("click",function event(){
+            span.style.backgroundColor = "grey"
+            total+= min*max
+            zero.innerText=""
+            zero.innerText+=+total
+            callBack()
+            span.removeEventListener("click",event)
+        })
+
+    }
+
+
+
+    let upper = document.getElementById("seatingUpper");
+    let amount = document.getElementById("totalAmount")
+    
+    for(let i=1;i<=15;i++){
+        let span = document.createElement("span");
+        span.id = `upper${i}`
+        let min = 1;
+        let max = 500
+        // span.addEventListener("click",()=>{
+        //     span.style.backgroundColor = "grey"
+        //     span.style.border = "red 1px solid"
+        //     span.innerText = `Seat${i}`
+        //     span.style.color = "white"
+        //     span.style.fontSize = "0.20rem";
+        //     span.style.textAlign ="center"
+        //     total+= min*max
+        //     zero.innerText=""
+        //     zero.innerText+=+total
+        //     count++
+        // })
+        span.addEventListener("click", function event() {
+            span.style.backgroundColor = "grey";
+            span.style.border = "1px solid red";
+            span.innerText = `Seat${i}`;
+            span.style.color = "white";
+            span.style.fontSize = "0.20rem";
+            span.style.textAlign = "center";
+            total += min * max;
+            zero.innerText = total;
+            span.removeEventListener("click", event);
+            callBack()
+        });
+
+        upper.appendChild(span)
+    }
+
+
+
+    function seatingOpen(){
+        let seating = document.getElementById("seatsMainDiv");
+        seating.style.display = "grid";
+    }
+
+    let selectSeat = parseInt(localStorage.getItem("seatCount"))
+    console.log(selectSeat)
+    let num = selectSeat
+
+
+    let mainDiv = document.getElementById("mainPayDiv")
+        for(i=1;i<=num;i++){
+            mainDiv.innerHTML+=`<div id = "payInnerDiv">
+                <b>Passsenger ${i}</b>
+                <form action="">
+
+                    <table>
+                        <tr>
+                            <td><label for="name">Name</label></td>
+                            <td><input type="text" id="payId" min="4"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Gender</label></td>
+                            <td><input type="radio" id="male" name="gender" value="Male">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="female">Female</label> <br></td>
+                        </tr>
+                        <tr>
+                            <td><label for="age">Age</label></td>
+                            <td><input type="text" id="age"> <br></td>
+                        </tr>
+                        <tr>
+                            <td><label for="state">State of Residence *</label></td>
+                            <td><input type="text" id="payId" min="4"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="mobile">Mobile*</label></td>
+                            <td><input type="text" id="payMobile" min="10" max="10"></td>
+                        </tr>        
+                        
+                        <tr>
+                            <td>
+                                <input type ="submit" id ="submit" value="confirm">
+                            </td>
+                        </tr>
+
+                        
+                    </table>
+                </form>
+            </div>`
+        }
+
+         let payDialog = document.getElementById("payDialog");
+        function paymentDialog(){
+            payDialog.showModal()
+            document.body.style.opacity ="0.5"
+
+        }
+
+        function payClose(){
+            payDialog.close()
+            document.body.style.opacity ="2"
+
+        }
+
+        let person = document.forms[0]
+        console.log(person)
+        person.addEventListener("submit",(data)=>{
+            data.preventDefault()
+          let name= data.target[0].value
+          let gender = data.target[2].value
+          let age = data.target[3].value
+          let state = data.target[4].value
+          let mobile = data.target[5].value
+
+          let details = {
+            name:name,
+            age:age,
+            mobile:mobile
+          }
+          console.log(details)
+
+          localStorage.setItem("details",JSON.stringify(details))
+        })
+
+        let success = document.getElementById("payButton")
+        success.addEventListener("click",()=>{
+            window.location.assign("./ticket.html")
+        })
+ </script>
+
+</body>
+</html>

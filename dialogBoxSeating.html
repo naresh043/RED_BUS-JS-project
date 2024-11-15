@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+          }
+
+            html {
+            font-size: 3.62vw;
+            }
+            #payDialog{
+                left: 68%;
+                width: 30%;
+                border: none;
+                border: 1px solid #e0e0e0;
+
+            }
+            #mainPayDiv{
+            }
+            #mainPayDiv b{
+                font-size: 0.35rem;
+                margin: 0;
+            }
+            html p{
+                margin: 0;
+            }
+            #payInnerDiv{
+                border: 1px solid #e0e0e0;
+                padding: 0.20rem;
+
+
+
+            }
+            #payInnerDiv p{
+                font-size: 0.30rem; 
+            }
+
+            #payInnerDiv label{
+                font-size: 0.30rem;
+            }
+            #payId,#payState,#age, #payMobile{
+                width: 140%;
+                height: 0.50rem;
+            }
+            #payButton{
+                font-size: 0.30rem;
+                width: 40%;
+                font-weight: 600;
+                background-color: rgb(233, 85, 93);
+                color: white;
+                border: none;
+                padding: 0.15rem;
+                margin-left: 30%;
+            }
+            #cancelPay{
+                float: right;
+                margin-top: 0.50rem;
+                font-size: 0.50rem;
+                cursor: pointer;
+            }
+
+    </style>
+ 
+</head>
+<body>
+   
+    <dialog open id="payDialog">
+        <div id="mainPayDiv">
+            <b><span class="material-symbols-outlined">account_circle</span>Passenger Information</b><span id="cancelPay" onclick="payClose()" class="material-symbols-outlined">cancel</span>
+        </div>
+        <button id="payButton">PROCEED TO PAY</button>
+    </dialog>
+    <script>
+        let selectSeat = parseInt(localStorage.getItem("seatCount"))
+        // console.log(selectSeat)
+        let num = selectSeat
+        console.log(num)
+        let mainDiv = document.getElementById("mainPayDiv")
+        for(i=1;i<=num;i++){
+            mainDiv.innerHTML+=`<div id = "payInnerDiv">
+                <b>Passsenger ${i}</b>
+                <form action="">
+
+                    <table>
+                        <tr>
+                            <td><label for="name">Name</label></td>
+                            <td><input type="text" id="payId" min="4"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Gender</label></td>
+                            <td><input type="radio" id="male" name="gender" value="Male">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="female">Female</label> <br></td>
+                        </tr>
+                        <tr>
+                            <td><label for="age">Age</label></td>
+                            <td><input type="text" id="age"> <br></td>
+                        </tr>
+                        <tr>
+                            <td><label for="state">State of Residence *</label></td>
+                            <td><input type="text" id="payId" min="4"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="mobile">Mobile*</label></td>
+                            <td><input type="text" id="payMobile" min="10" max="10"></td>
+                        </tr>
+                        
+
+                        
+                    </table>
+                </form>
+            </div>`
+        }
+    </script>
+</body>
+</html>
